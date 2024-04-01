@@ -46,7 +46,7 @@ func RecoverPassword(email string) (string, error) {
 
 	recoveryToken, err := jwt.CreateToken(user.Username)
 	if err != nil {
-		log.Println("Error al creal token", http.StatusInternalServerError)
+		log.Println("Error al crear token", http.StatusInternalServerError)
 		return "", err
 	}
 
